@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comments">
+	<select id="findCountryComments" resultType="data.Comment">
+		SELECT * FROM COMMENTS WHERE COUNTRY= #{country } ORDER BY WRITED DESC
+	</select>
+	<insert id="createComment" parameterType="hashmap">
+		INSERT INTO COMMENTS(COUNTRY, WRITER, BODY) VALUES(#{country },#{writer },#{body })
+	</insert>
+	<select id="findByCommentsAtoB" resultType="data.Comment" parameterType="hashmap">
+		SELECT * FROM (SELECT ROWNUM RN, t.* FROM (SELECT * FROM COMMENTS WHERE COUNTRY= #{country } ORDER BY WRITED DESC)t) WHERE RN BETWEEN #{a } AND #{b }
+	</select>
+</mapper>

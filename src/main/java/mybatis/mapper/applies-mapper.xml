@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="applies">
+	<select id="findByApply" resultType="int" parameterType="hashmap">
+		SELECT COUNT(*) FROM APPLIES WHERE APP_ID= #{boardId } AND PARTICIPANT= #{entry }
+	</select>
+	<insert id="apply" parameterType="hashmap">
+		INSERT INTO APPLIES VALUES (#{boardId }, #{entry })
+	</insert>
+	<select id="applicantCnt" resultType="int">
+		SELECT COUNT(*) FROM APPLIES WHERE APP_ID = #{boardId }
+	</select>
+</mapper>
