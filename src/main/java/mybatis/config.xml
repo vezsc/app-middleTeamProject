@@ -14,9 +14,9 @@
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver"
-					value="com.mysql.cj.jdbc.Driver" />
+					value="oracle.jdbc.driver.OracleDriver" />
 				<property name="url"
-					value="jdbc:oracle:thin:@3.34.136.30:1521:xe" />
+					value="jdbc:oracle:thin:@52.78.93.131:1521:xe" />
 				<property name="username" value="TEAM_G" />
 				<property name="password" value="1q2w3e4r" />
 			</dataSource>

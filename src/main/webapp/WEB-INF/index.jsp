@@ -67,7 +67,7 @@ body {
 					<datalist id="qlist">
 
 					</datalist>
-					<button type="submit" style="width: 40px; text-align: center;"><i class="fa-solid fa-magnifying-glass"></i>
+					<button type="submit" style="width: 40px; text-align: center;">검색
 					</button>
 				</form>
 			</div>

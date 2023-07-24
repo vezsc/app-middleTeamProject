@@ -47,7 +47,7 @@
   	<form action="/search">
     <input type="text" name="countryNm" class="searchBox" id="q" list="qlist" autocomplete="off"> 
     <datalist id="qlist"></datalist>
-    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button type="submit">검색</button>
     </form>
   </div>
   <div class="search-list">
